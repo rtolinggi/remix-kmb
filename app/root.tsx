@@ -7,10 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { NotificationsProvider } from "@mantine/notifications";
-import { MantineProvider } from "@mantine/core";
-import myTheme from "./themes";
-import { Button } from "./themes/styles";
+import ThemeProvider from "./themes";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -18,7 +15,7 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
-const Document = () => {
+const Document: React.FC = ({ children }) => {
   return (
     <html lang="en">
       <head>
@@ -26,7 +23,7 @@ const Document = () => {
         <Links />
       </head>
       <body>
-        <Outlet />
+        {children}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
@@ -37,15 +34,10 @@ const Document = () => {
 
 export default function App() {
   return (
-    <MantineProvider
-      theme={myTheme}
-      styles={{ Button }}
-      withNormalizeCSS
-      withGlobalStyles
-    >
-      <NotificationsProvider position="top-right">
-        <Document />
-      </NotificationsProvider>
-    </MantineProvider>
+    <Document>
+      <ThemeProvider>
+        <Outlet />
+      </ThemeProvider>
+    </Document>
   );
 }
