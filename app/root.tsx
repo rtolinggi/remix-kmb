@@ -9,6 +9,8 @@ import {
 } from "@remix-run/react";
 import { NotificationsProvider } from "@mantine/notifications";
 import { MantineProvider } from "@mantine/core";
+import myTheme from "./themes";
+import { Button } from "./themes/styles";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -35,7 +37,12 @@ const Document = () => {
 
 export default function App() {
   return (
-    <MantineProvider>
+    <MantineProvider
+      theme={myTheme}
+      styles={{ Button }}
+      withNormalizeCSS
+      withGlobalStyles
+    >
       <NotificationsProvider position="top-right">
         <Document />
       </NotificationsProvider>

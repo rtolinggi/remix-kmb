@@ -16,7 +16,9 @@ export default function IndexRoute() {
   return (
     <Container size="md" p="sm">
       <Center>
-        <Button onClick={() => showNotification(message)}>Notifikasi</Button>
+        <Button variant="gradient" onClick={() => showNotification(message)}>
+          Notifikasi
+        </Button>
       </Center>
     </Container>
   );
