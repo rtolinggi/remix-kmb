@@ -2,7 +2,6 @@ import {
   TextInput,
   PasswordInput,
   Checkbox,
-  Anchor,
   Paper,
   Title,
   Text,
@@ -24,13 +23,14 @@ export const Login = () => {
         px={30}
         py={20}
         mt='-5%'
+        mx='5px'
         radius='md'
         sx={() => ({ width: 370 })}>
         <Title
           align='center'
           order={2}
           sx={(theme) => ({
-            color: theme.colors.cyan[4],
+            color: theme.primaryColor,
           })}>
           Welcome back!
         </Title>
@@ -51,15 +51,19 @@ export const Login = () => {
           />
           <Group position='apart' mt='md'>
             <Checkbox label='Remember me' size='xs' />
-            <Anchor<"a">
-              onClick={(event) => event.preventDefault()}
-              href='#'
-              size='xs'>
-              Forgot password?
-            </Anchor>
+            <Box
+              component={Link}
+              to={"/register"}
+              sx={(theme) => ({
+                color: theme.primaryColor,
+                textDecoration: "none",
+                fontSize: theme.fontSizes.xs,
+              })}>
+              Forgot Password?
+            </Box>
           </Group>
           <Button fullWidth mt='xl'>
-            SIGN IN
+            Sign in
           </Button>
         </Form>
         <Divider mt='xl' />
@@ -69,7 +73,7 @@ export const Login = () => {
             component={Link}
             to={"/register"}
             sx={(theme) => ({
-              color: theme.colors.cyan[4],
+              color: theme.primaryColor,
               textDecoration: "none",
             })}>
             Create Account

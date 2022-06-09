@@ -1,11 +1,11 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @prisma/client
+  C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add bcryptjs
 
 PATH: 
-  C:\Users\ASUS\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ASUS\bin;C:\Python27;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Git\cmd;C:\xampp\mysql\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u302-b08\bin;C:\Users\ASUS\AppData\Local\Android\Sdk;C:\Users\ASUS\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\PostgreSQL\14\bin\psql.exe;C:\Program Files\nodejs;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps;C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ASUS\AppData\Roaming\Composer\vendor\bin;C:\Users\ASUS\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\heroku\bin;C:\Users\ASUS\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Users\User\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\User\bin;C:\Python310\Scripts;C:\Python310;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\OpenJDK\openjdk-8u312-b07\bin;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files\Redis;C:\php;C:\Program Files\nodejs;C:\Users\User\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Local\Android\Sdk\platform-tools;C:\xampp\php;C:\Users\User\composer;C:\Users\User\AppData\Roaming\Composer\vendor\bin;C:\php;C:\Users\User\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
-  1.22.18
+  1.22.17
 
 Node version: 
   16.15.0
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\ASUS\OneDrive\Desktop\NodeJS\Remix\crud\node_modules\esbuild-windows-64\esbuild.exe'
+  Error: EPERM: operation not permitted, unlink 'D:\Program\RemixJS\remix-kmb\node_modules\prisma\engines\b9297dc3a59307060c1c39d7e4f5765066f38372\query_engine-windows.dll.node'
 
 npm manifest: 
   {
@@ -29,6 +29,7 @@ npm manifest:
       "@mantine/hooks": "^4.2.8",
       "@mantine/notifications": "^4.2.8",
       "@mantine/ssr": "^4.2.8",
+      "@prisma/client": "^3.15.0",
       "@remix-run/node": "^1.5.1",
       "@remix-run/react": "^1.5.1",
       "@remix-run/vercel": "^1.5.1",
@@ -799,6 +800,18 @@ Lockfile:
     "integrity" "sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw=="
     "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.5.tgz"
     "version" "2.11.5"
+  
+  "@prisma/client@^3.15.0":
+    "integrity" "sha512-0bwpIXtE3qkkm8JV6kSHLPyEbEUQD+hFAO7NM5INr23vFBOoyKwKI1Q4V08A7jq3NdI7g2NlBuugCHE9//1ANw=="
+    "resolved" "https://registry.npmjs.org/@prisma/client/-/client-3.15.0.tgz"
+    "version" "3.15.0"
+    dependencies:
+      "@prisma/engines-version" "3.15.0-29.b9297dc3a59307060c1c39d7e4f5765066f38372"
+  
+  "@prisma/engines-version@3.15.0-29.b9297dc3a59307060c1c39d7e4f5765066f38372":
+    "integrity" "sha512-VRj1Svti6h4UnUxEbIpio+40zppFztGKogVbkgblndbEQfmNdLh2M5bzDD6kaO+r8LBxHUBzUG/zEmlpxTvwoA=="
+    "resolved" "https://registry.npmjs.org/@prisma/engines-version/-/engines-version-3.15.0-29.b9297dc3a59307060c1c39d7e4f5765066f38372.tgz"
+    "version" "3.15.0-29.b9297dc3a59307060c1c39d7e4f5765066f38372"
   
   "@prisma/engines@3.15.0-29.b9297dc3a59307060c1c39d7e4f5765066f38372":
     "integrity" "sha512-S5T0NuVF2+NoKoxY5bN6O/7avv4ifcjqqk5+JFZ6C4g+P7JMM3nY0wGBPI+46A8yGIDsyyFmvFTYiIDsEUwUeQ=="
@@ -5417,7 +5430,7 @@ Lockfile:
     dependencies:
       "parse-ms" "^2.1.0"
   
-  "prisma@^3.15.0":
+  "prisma@*", "prisma@^3.15.0":
     "integrity" "sha512-HL1kGDuFi9PdhbVLYsQO9vAH9uRFAHk7ifUOQxSrzUDs7R4VfLtg45VvXz8VHwcgLY5h0OrDVe1TdEX7a4o9tg=="
     "resolved" "https://registry.npmjs.org/prisma/-/prisma-3.15.0.tgz"
     "version" "3.15.0"

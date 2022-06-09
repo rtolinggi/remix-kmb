@@ -1,8 +1,7 @@
 import type { MantineThemeOverride } from "@mantine/core";
 import { MantineProvider } from "@mantine/core";
 import { NotificationsProvider } from "@mantine/notifications";
-import { Button } from "./styles/button";
-
+import { Button } from "./styles";
 import React from "react";
 
 const myTheme: MantineThemeOverride = {
@@ -18,9 +17,8 @@ const ThemeProvider: React.FC = ({ children }) => {
       theme={myTheme}
       styles={{ Button }}
       withNormalizeCSS
-      withGlobalStyles
-    >
-      <NotificationsProvider position="top-right">
+      withGlobalStyles>
+      <NotificationsProvider position='top-right'>
         {children}
       </NotificationsProvider>
     </MantineProvider>

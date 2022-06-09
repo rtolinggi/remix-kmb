@@ -20,13 +20,14 @@ export const Register = () => {
         shadow='md'
         px={30}
         py={20}
+        mx='5px'
         radius='md'
         sx={() => ({ width: 370 })}>
         <Title
           align='center'
           order={2}
           sx={(theme) => ({
-            color: theme.colors.cyan[4],
+            color: theme.primaryColor,
           })}>
           Create Account
         </Title>
@@ -34,7 +35,7 @@ export const Register = () => {
         <Form>
           <TextInput
             icon={<User size={16} />}
-            label='Email'
+            label='Full Name'
             placeholder='Youre Name'
             required
           />
@@ -70,7 +71,7 @@ export const Register = () => {
             component={Link}
             to={"/login"}
             sx={(theme) => ({
-              color: theme.colors.cyan[4],
+              color: theme.primaryColor,
               textDecoration: "none",
             })}>
             Login
