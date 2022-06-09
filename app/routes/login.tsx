@@ -6,7 +6,6 @@ import {
   Paper,
   Title,
   Text,
-  Container,
   Group,
   Button,
   Box,
@@ -14,51 +13,57 @@ import {
 } from "@mantine/core";
 import { Form, Link } from "@remix-run/react";
 import { At, Lock } from "tabler-icons-react";
+import { AuthLayout } from "~/components/layouts";
 
 export const Login = () => {
   return (
-    <Container size={410}>
-      <Paper withBorder shadow="md" px={30} py={20} mt={"40%"} radius="md">
+    <AuthLayout>
+      <Paper
+        withBorder
+        shadow='md'
+        px={30}
+        py={20}
+        mt='-5%'
+        radius='md'
+        sx={() => ({ width: 370 })}>
         <Title
-          align="center"
+          align='center'
           order={2}
           sx={(theme) => ({
             color: theme.colors.cyan[4],
-          })}
-        >
+          })}>
           Welcome back!
         </Title>
-        <Divider my="xs" label="SIGN IN" labelPosition="center" />
+        <Divider my='xs' label='SIGN IN' labelPosition='center' />
         <Form>
           <TextInput
             icon={<At size={16} />}
-            label="Email"
-            placeholder="Youre Email"
+            label='Email'
+            placeholder='Youre Email'
             required
           />
           <PasswordInput
             icon={<Lock size={16} />}
-            label="Password"
-            placeholder="Your password"
+            label='Password'
+            placeholder='Your password'
             required
-            mt="md"
+            mt='md'
           />
-          <Group position="apart" mt="md">
-            <Checkbox label="Remember me" size="xs" />
+          <Group position='apart' mt='md'>
+            <Checkbox label='Remember me' size='xs' />
             <Anchor<"a">
               onClick={(event) => event.preventDefault()}
-              href="#"
-              size="xs"
-            >
+              href='#'
+              size='xs'>
               Forgot password?
             </Anchor>
           </Group>
-          <Button fullWidth mt="xl">
-            Sign in
+          <Button fullWidth mt='xl'>
+            SIGN IN
           </Button>
         </Form>
-        <Divider mt="xl" />
-        <Text color="dimmed" size="sm" align="center" mt={5}>
+        <Divider mt='xl' />
+        <Text color='dimmed' size='sm' align='center' mt={5}>
           Do not have an account yet?{" "}
           <Box
             component={Link}
@@ -66,13 +71,12 @@ export const Login = () => {
             sx={(theme) => ({
               color: theme.colors.cyan[4],
               textDecoration: "none",
-            })}
-          >
+            })}>
             Create Account
           </Box>
         </Text>
       </Paper>
-    </Container>
+    </AuthLayout>
   );
 };
 

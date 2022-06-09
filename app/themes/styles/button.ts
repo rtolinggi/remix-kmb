@@ -7,6 +7,7 @@ const button = {
       height: 36,
       padding: "0 22px",
       borderRadius: theme.radius.sm,
+      fontWeight: "bold",
     },
 
     // Variant Filled
